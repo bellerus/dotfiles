@@ -2,6 +2,14 @@
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+
+grepSearch() {
+    #do things with parameters like $1 such as
+    grep -rn --color $1 $2
+}
+
+alias search=grepSearch
+
 # Alias
 alias bashreload=". ~/.bash_profile"
 alias stratus="cd ~/_source/stratus/ui"
@@ -22,5 +30,7 @@ alias gser="git server"
 alias gyes="git yesterday"
 alias gcount="git rev-list --count HEAD ^master"
 alias gcommit="git for-each-ref --sort=-committerdate refs/heads/"
+
+ulimit -n 1000
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
