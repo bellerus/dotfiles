@@ -30,6 +30,7 @@ alias gser="git server"
 alias gyes="git yesterday"
 alias gcount="git rev-list --count HEAD ^master"
 alias gcommit="git for-each-ref --sort=-committerdate refs/heads/"
+alias grecent="git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/"
 
 ulimit -n 1000
 
