@@ -22,8 +22,8 @@ alias search=grepSearch
 
 # Alias
 alias bashreload=". ~/.bash_profile"
-alias stratus="cd ~/_source/stratus/ui"
-alias sc="cd ~/_source"
+alias src="cd ~/src"
+alias disco="cd ~/src/Disco"
 alias ll='ls -la'
 alias g='grunt'
 alias gss='grunt css'
