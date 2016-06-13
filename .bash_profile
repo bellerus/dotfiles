@@ -1,20 +1,4 @@
-# For bash completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-fi
-
-function prompt
-{
-    local WHITE="\[\033[1;37m\]"
-    local GREEN="\[\033[0;32m\]"
-    local CYAN="\[\033[0;36m\]"
-    local GRAY="\[\033[0;37m\]"
-    local BLUE="\[\033[0;34m\]"
-    # If want to add user@host then: ${GREEN}\u${CYAN}@${BLUE}\h
-    export PS1="${GREEN}$ ${CYAN}\w"' $(__git_ps1 "(%s)") '"${GRAY}"
-}
-prompt
- 
+export JAVA_HOME=$(/usr/libexec/java_home)
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
@@ -28,10 +12,8 @@ alias search=grepSearch
 # Alias
 alias bashreload=". ~/.bash_profile"
 alias src="cd ~/src"
-alias disco="cd ~/src/Disco"
+alias func="cd ~/src/disco-functional-tests"
 alias ll='ls -la'
-alias g='grunt'
-alias gss='grunt css'
 
 # git alias
 alias gpum="git pull --rebase upstream master"
@@ -48,5 +30,3 @@ alias gcommit="git for-each-ref --sort=-committerdate refs/heads/"
 alias grecent="git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/"
 
 ulimit -n 1000
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
