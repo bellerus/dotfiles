@@ -1,6 +1,6 @@
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-source ~/.git-prompt.sh
+source ~/_/code/dotfiles/.git-prompt.sh
 
 function prompt
 {
@@ -27,17 +27,9 @@ alias search=grepSearch
 # Alias
 alias bashreload=". ~/.bash_profile"
 alias src="cd ~/src"
-alias disco="cd ~/src/disco-app/CasiLabs.Disco.WebUi/client"
-alias orgs="cd ~/src/disco-app/CasiLabs.Disco.WebUi/client/apps/organizations"
-alias apps="cd ~/src/disco-app/CasiLabs.Disco.WebUi/client/apps"
-alias appr="cd ~/src/disco-app/CasiLabs.Disco.WebUi/client/apps/root"
-alias bundler="cd ~/src/disco-app/CasiLabs.Disco.WebUi/client/bundler"
-alias func="cd ~/src/disco-functional-tests"
+alias code="cd ~/_/code"
+alias dj="cd ~/_/code/docjuris-app"
 alias ll='ls -la'
-alias tst="~/src/disco-functional-tests/b2.sh"
-alias soxy="sudo npm run dev:proxy"
-alias derver="sudo npm run dev:server"
-alias checkyarnlinks="ls -l node_modules | grep ^l"
 
 # git alias
 alias gpum="git pull --rebase upstream master"
@@ -56,17 +48,7 @@ alias gamm="git commit --amend --no-edit"
 alias gdiff="git diff --color | diff-so-fancy"
 alias gkillmerged="git branch --merged | egrep -v \"(^\*|master|dev)\" | xargs git branch -d"
 
-# virtual env
-alias startvirtual="source ~/venv3.4/bin/activate"
-
-# aws
-alias syncorgs="orgs && aws s3 sync ./build s3://app.test.csdisco.com"
-alias syncroot="appr && aws s3 sync ./build s3://app.test.csdisco.com"
-
 # misc
 alias editbash="vim ~/.bash_profile"
-
-# login into linux
-alias getLinuxBox="cd ~/Documents/disco/pem && ssh -i garcia-dev.pem ubuntu@10.10.139.137"
 
 ulimit -n 1000
