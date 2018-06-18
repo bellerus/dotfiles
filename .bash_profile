@@ -1,5 +1,3 @@
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 source ~/_/code/dotfiles/.git-prompt.sh
 
 function prompt
