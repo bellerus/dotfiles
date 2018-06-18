@@ -1,0 +1,1 @@
+:imap vv <Esc>
