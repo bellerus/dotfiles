@@ -1,4 +1,6 @@
-source ~/_/code/dotfiles/.git-prompt.sh
+export NPM_TOKEN="b815e945-b0ae-4d77-887d-1839a4f34d77"
+
+source ~/_/src/dotfiles/.git-prompt.sh
 
 function prompt
 {
@@ -24,13 +26,13 @@ alias search=grepSearch
 
 # Alias
 alias bashreload=". ~/.bash_profile"
-alias src="cd ~/src"
-alias code="cd ~/_/code"
-alias dj="cd ~/_/code/docjuris-app"
+alias src="cd ~/_/src"
+alias dj-app="cd ~/_/src/docjuris-app/DocJuris/ClientApp"
+alias dj-kit="cd ~/_/src/docjuris-ui-kit"
 alias ll='ls -la'
 
 # git alias
-alias gpum="git pull --rebase upstream master"
+alias gpum="git pull --rebase origin master"
 alias gpom="git push origin master"
 alias gco="git checkout"
 alias gbl="git branch -l"
